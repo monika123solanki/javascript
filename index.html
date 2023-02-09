@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Demo</title>
+</head>
+<body>
+
+    <input
+        type="text"
+        id="elem1"
+        placeholder="Enter Name"
+    >
+
+    <button
+        type="button"
+        onclick='message();'
+    >
+        +
+    </button>
+
+
+
+    <!-- <button
+        type="button"
+        onclick='message();'
+    >
+        -
+    </button> -->
+
+    <div id="hob">
+
+    </div>
+
+    <script>
+        var hob = document.getElementById("hob");
+        function message(){
+            // console.log("Hi");
+            // var elem = document.querySelector('#elem1');
+            // console.log(elem);
+           var x = document.createElement("INPUT");
+           x.setAttribute("type", "text");
+           x.setAttribute("placeholder", "Enter Name");
+
+
+           var y = document.createElement("INPUT");
+           y.setAttribute("type", "button");
+           y.setAttribute("value", "-");
+
+           y.setAttribute("onclick","removeBox(this)")
+        // x.innerHTML = y;
+         hob.appendChild(x);
+          hob.appendChild(y);
+        //    document.body.appendChild(x);
+        //    document.body.appendChild(y);
+
+        //    z=document.body.appendChild(y);
+        //    document.body.removeChild(z);
+        }
+  function removeBox(ele){
+  ele.parentNode.remove();
+  }
+
+
+
+
+    </script>
+
+</body>
+</html>
